@@ -38,19 +38,21 @@ padding:10px;
 
 <br>
 
-<input id="userInput" placeholder="Type your message">
-<button onclick="sendMessage()">Send</button>
+import { askAI } from "./api/ai.js"
 
-<script>
 function sendMessage(){
 
-let input=document.getElementById("userInput").value
+let input = document.getElementById("userInput").value
 
-let chatbox=document.getElementById("chatbox")
+let reply = askAI(input)
 
-chatbox.innerHTML+="<p>You: "+input+"</p>"
+document.getElementById("chat").innerHTML +=
+"<p>You: "+input+"</p>"
 
-chatbox.innerHTML+="<p>AI: I am learning... soon I will be powerful AI!</p>"
+document.getElementById("chat").innerHTML +=
+"<p>MyTurn AI: "+reply+"</p>"
+
+}
 
 }
 </script>
