@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>AI Website Builder</title>
+
+<style>
+
+body{
+background:black;
+color:white;
+text-align:center;
+font-family:Arial;
+}
+
+textarea{
+width:80%;
+height:120px;
+}
+
+button{
+padding:10px;
+}
+
+#result{
+border:1px solid white;
+padding:20px;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>AI Website Builder</h1>
+
+<p>Describe your website</p>
+
+<textarea id="prompt"></textarea>
+
+<br><br>
+
+<button onclick="generateSite()">Generate Website Code</button>
+
+<div id="result"></div>
+
+<script>
+
+function generateSite(){
+
+let text=document.getElementById("prompt").value
+
+document.getElementById("result").innerHTML=
+"AI is generating website code for: "+text
+
+}
+
+</script>
+
+</body>
+
+</html>
