@@ -1,40 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AI Secret World Chatbot</title>
-<style>
-body{
-font-family: Arial;
-background:black;
-color:white;
-text-align:center;
-}
-
-#chatbox{
-width:80%;
-height:300px;
-border:1px solid white;
-margin:auto;
-overflow:auto;
-padding:10px;
-}
-
-input{
-width:70%;
-padding:10px;
-}
-
-button{
-padding:10px;
-}
-</style>
+<title>MyTurn AI</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>AI Secret World Chatbot</h1>
+<h2>MyTurn AI Chat</h2>
 
-<div id="chatbox"></div>
+<div id="chat"></div>
+
+<input id="userInput" type="text" placeholder="Ask MyTurn AI...">
+
+<button onclick="sendMessage()">Send</button>
+
+<script src="script.js"></script>
+
+</body>
+</html><div id="chatbox"></div>
 
 <br>
 
