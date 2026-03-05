@@ -6,7 +6,7 @@ const response = await fetch("https://api.openai.com/v1/chat/completions",{
 method:"POST",
 headers:{
 "Content-Type":"application/json",
-"Authorization":"Bearer YOUR_API_KEY"
+"Authorization":"Bearer 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"
 },
 body:JSON.stringify({
 model:"gpt-4o-mini",
