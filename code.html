@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Coding Generator</title>
+<style>
+
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+
+textarea{
+width:80%;
+height:100px;
+}
+
+#result{
+border:1px solid white;
+padding:10px;
+margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>AI Coding Generator</h1>
+
+<p>Describe the code you want</p>
+
+<textarea id="prompt"></textarea>
+
+<br><br>
+
+<button onclick="generateCode()">Generate Code</button>
+
+<div id="result"></div>
+
+<script>
+
+function generateCode(){
+
+let text=document.getElementById("prompt").value
+
+document.getElementById("result").innerHTML=
+"AI is generating code for: "+text
+
+}
+
+</script>
+
+</body>
+</html>
