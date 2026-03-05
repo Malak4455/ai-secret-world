@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>AI Image Generator</title>
+
+<style>
+
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+
+input{
+padding:10px;
+width:300px;
+}
+
+button{
+padding:10px;
+}
+
+img{
+margin-top:20px;
+max-width:400px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>AI Image Generator</h1>
+
+<p>Describe the image</p>
+
+<input id="prompt" placeholder="example: futuristic robot">
+
+<br><br>
+
+<button onclick="generateImage()">Generate Image</button>
+
+<br>
+
+<img id="result">
+
+<script>
+
+async function generateImage(){
+
+let prompt=document.getElementById("prompt").value
+
+const res=await fetch("/api/image",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({prompt:prompt})
+})
+
+const data=await res.json()
+
+document.getElementById("result").src=data.data[0].url
+
+}
+
+</script>
+
+</body>
+
+</html>
